@@ -12,7 +12,33 @@
     <script type="text/javascript" src="plotta/testData.js"></script>
     <script>
       const canvas = document.getElementById("canvas");
-      var plotta = new Plotta(canvas, testData);
+      const plotta = new Plotta(canvas, {
+        /*
+    Data : 
+  */
+        linedatas: [
+          {
+            id: "line1",
+            type: "func",
+            legend: "cos",
+            color: "#55A8DE",
+            visible: true,
+            func: Math.cos,
+            dotNum: 1000
+          }
+        ],
+        config: {
+          grid: {
+            visible: true,
+            color: "#888888"
+          },
+          border: {
+            visible: true,
+            color: "#DDDDDD",
+            width: 1
+          }
+        }
+      });
     </script>
   </body>
 </html>
